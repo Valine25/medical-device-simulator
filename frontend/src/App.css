@@ -1,0 +1,104 @@
+body{
+  margin:0;
+  background:linear-gradient(135deg,#0f172a,#020617);
+  font-family:system-ui;
+  color:white;
+}
+
+.dashboard{
+  text-align:center;
+  padding:40px;
+}
+
+.dashboard h1{
+  font-size:36px;
+  margin-bottom:40px;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+}
+
+.card{
+  background:#1e293b;
+  padding:30px;
+  border-radius:16px;
+  width:220px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  transition:transform .2s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h2{
+  color:#94a3b8;
+  margin-bottom:15px;
+}
+
+.card p{
+  font-size:32px;
+  font-weight:bold;
+}
+
+.card:first-child p{
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+
+.status{
+  margin-top:30px;
+  font-size:18px;
+}
+
+.green{
+  color:#22c55e;
+  margin-left:10px;
+  font-weight:bold;
+}
+
+.red{
+  color:#ef4444;
+  margin-left:10px;
+  font-weight:bold;
+}
+
+.alert{
+  margin-top:25px;
+  color:#ef4444;
+  font-size:22px;
+}
+
+.chart{
+  margin-top:40px;
+  background:#020617;
+  padding:30px;
+  border-radius:12px;
+  width:700px;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow:0 0 20px #00ff9c44;
+}
+
+.chart::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  height:2px;
+  background:#00ff9c;
+  animation:scan 3s linear infinite;
+}
+
+@keyframes scan{
+  0%{transform:translateY(-200px);}
+  100%{transform:translateY(200px);}
+}
